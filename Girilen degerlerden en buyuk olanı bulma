@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(void) {
+
+	int dizi[5];
+	int i, toplam, buyuk;
+
+	for (i = 0; i < 5; i++) {
+
+		printf("%d. sayi giriniz: ", i + 1);
+		scanf_s("%d", &dizi[i]);
+	}
+	toplam = 0;
+
+	for (i = 0; i < 5; i++) {
+		toplam = toplam + dizi[i];
+	}
+
+	for (i = 0; i < 5; i++) {
+
+		if (i == 0) {
+			buyuk = dizi[i];
+		}
+		else {
+			if (dizi[i] > buyuk)
+				buyuk = dizi[i];
+		}
+	}
+
+	printf("Buyuk sayi= %d", buyuk);
+
+	return 0;
+}
+
