@@ -1,0 +1,25 @@
+DENEY 3
+
+#include <stdio.h>
+#include <conio.h>
+
+int main() {
+
+    int sayi, gecici, sonuc = 0, kalan;
+
+    printf("Sayi Giriniz: ");
+    scanf_s("%d", &sayi);
+
+    gecici = sayi;
+
+    while (gecici > 0) {
+
+        kalan = gecici % 10;
+        sonuc = sonuc * 10 + kalan;
+        gecici /= 10;
+    }
+
+    printf("%d'nin tersi= %d", sayi, sonuc);
+
+    return 0;
+}
