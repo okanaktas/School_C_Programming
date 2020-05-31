@@ -1,0 +1,3 @@
+//int tekrar(char dizgi[], char aranan, int boyut); 
+
+int tekrar(char *dizgi, char aranan[], float boyut); 

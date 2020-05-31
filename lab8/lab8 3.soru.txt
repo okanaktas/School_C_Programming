@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int palindromMu(char *dizgi){
+int i = 0, c = 0, n;
+  
+n=strlen(dizgi);
+  
+   for(i = 0; i < n/2; i++){
+   if(dizgi[i] != dizgi[n-i-1]){
+   return 0;
+   }
+    }
+    return 1;
+}
+
+int main(){
+  
+char dizgi[1000];
+printf("Bir kelime girin: \n");
+gets(dizgi);
+  
+if(palindromMu(dizgi))
+    printf("Kelime bir palindrom");
+else
+printf("Kelime palindrom deðil");
+}

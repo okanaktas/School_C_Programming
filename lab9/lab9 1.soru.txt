@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main() {
+	
+	
+	FILE *dosya;
+	int sayilar[100];
+	int i, enbuyuk = 0,enkucuk = 0;
+	
+	dosya = fopen("C:\\Users\okana\\Desktop\\sayi.txt","r");
+		
+	
+	for(i=0; i<10; i++)
+	{
+		fscanf(dosya,"%d",&sayilar[i]);
+	}
+	
+	for(i=0; i<10; i++)
+	{
+		printf("%d\n",sayilar[i]);
+	}
+
+	for(i=0; i<10; i++)
+	{
+		if(i==0)
+		{
+			enbuyuk = sayilar[i];
+			enkucuk = sayilar[i];
+		}
+		else
+		{
+			if (enbuyuk<sayilar[i])
+			{
+				enbuyuk = sayilar[i];
+			}
+			if (enkucuk>sayilar[i])
+			{
+				enkucuk = sayilar[i];
+			}
+		}
+	}
+	printf("En buyuk: %d\n",enbuyuk);
+	printf("En kucuk %d",enkucuk);
+
+	fclose(dosya);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	return 0;
+}

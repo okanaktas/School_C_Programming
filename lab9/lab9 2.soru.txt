@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main() {
+	
+	
+	FILE *dosya;
+	int sayilar[1000];
+	int i, toplamtek,toplamcift;
+	
+	dosya = fopen("C:\\Users\\okana\\Desktop\\sirala.txt","r");
+		
+	
+	for(i=0; i<100; i++)
+	{
+		fscanf(dosya,"%d",&sayilar[i]);
+	}
+	
+	for(i=0; i<100; i++)
+	{
+		if (i==0)
+		{
+			toplamtek = 1;
+			toplamcift = 0;
+		}
+		else
+		{
+			if (sayilar[i] % 2 == 0)
+			{
+				toplamcift = toplamcift + sayilar[i];
+			}
+			else
+			{
+				toplamtek = toplamtek + sayilar[i];
+			}
+		}
+	}
+	
+	printf("Tek sayilarin toplami: %d\n",toplamtek);
+	printf("Cift sayilarin toplami: %d",toplamcift);
+	
+
+	fclose(dosya);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	return 0;
+}
